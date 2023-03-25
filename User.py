@@ -11,8 +11,6 @@ connection = pyodbc.connect(connectionString, autocommit=True)
 dbCursor = connection.cursor()
 
 clear = lambda: os.system('cls')
-buy = 0
-
 
 def buyOlivie(id_user):
     status = True
@@ -165,7 +163,6 @@ def buyOlivie(id_user):
                         dbCursor.execute(f"UPDATE [User] SET [Loyality_ID] = 4 WHERE [ID_User] = {id_user}")
                         connection.commit()
                     status = False
-                    buy += 1
                     time.sleep(2)
                     mainUser(id_user)
                 else:
@@ -227,12 +224,7 @@ def mainUser(id_user):
     elif choice == 3:
        return cardLoyalty(id_user)
     elif choice == 4:
-       if (buy == 0):
-           return MainAutoReg.main()
-       else:
-           print("Купите сначала товар!")
-           time.sleep(2)
-           mainUser(id_user)
+       return MainAutoReg.main()
     else:
        raise TypeError
     
