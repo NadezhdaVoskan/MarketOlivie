@@ -34,7 +34,7 @@ def buySupplier(id_user):
     elif choice == 1:
                 
         try:
-            idIngridient = int(input("Выберите ингридиент для поставки: \n"))
+            idIngridient = int(input("Выберите ингредиент для поставки: \n"))
         except ValueError:
             print("Введены неверные данные! Попробуйте заново!")
             time.sleep(2)
