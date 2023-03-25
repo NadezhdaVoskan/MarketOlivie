@@ -29,7 +29,7 @@ def buyOlivie(id_user):
     for i in range(len(typeIngridient)):
         print(f"{i+1}. {typeIngridient[i]} - {nameIngridient[i]} - {costIngridient[i]} рублей.\n")
 
-    choice = int(input("1. Выбрать ингридитенты для оливье.\n2. Назад. \n"))
+    choice = int(input("1. Выбрать ингрединенты для оливье.\n2. Назад. \n"))
     if choice == 2:
         clear()
         time.sleep(1)
