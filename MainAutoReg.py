@@ -47,7 +47,7 @@ def authorization():
             phone_user, password_user, id_user, role_user = "","","",""
             status = False
             phoneRequest = "+7" + phone
-            password = maskpass.askpass(prompt="Введnите пароль:", mask="*")
+            password = maskpass.askpass(prompt="Введите пароль:", mask="*")
             for row in dbCursor.execute(f"SELECT * FROM [User] where [Phone_User] = '{phoneRequest}'"):
                 phone_user = row.Phone_User
                 password_user = row.Password_User
