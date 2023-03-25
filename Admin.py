@@ -22,7 +22,7 @@ def buySupplier(id_user):
         typeIngridient.append(row.Name_Type)
         countIngridient.append(row.Count_Ingridient)
 
-    print("Список ингридиентов: \n")
+    print("Список ингредиентов: \n")
     for i in range(len(typeIngridient)):
         print(f"{i+1}. {typeIngridient[i]} - {nameIngridient[i]} - {countIngridient[i]} шт. - {costIngridient[i]} рублей.\n")
 
